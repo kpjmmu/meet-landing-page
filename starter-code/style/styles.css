@@ -1,0 +1,430 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ================
+   Typography
+   ================*/
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.main-pretitle {
+    text-transform: uppercase;
+    color: #4D96A9;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle,
+.main-content-text {
+    color: #87879D;
+}
+
+.footer-title {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.footer-text {
+    font-size: 1.125rem;
+    padding-bottom: 2rem;
+}
+
+/* ================
+   Layout
+   ================*/
+.container {
+    padding: 0 1.5em;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 255px));
+    column-gap: 1.563rem;
+    row-gap: 1.563rem;
+}
+
+.img-1,
+.img-3 {
+    grid-column: 1 / 2;
+}
+
+.img-2,
+.img-4 {
+    grid-column: 2 / 3;
+}
+
+.gallery-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* ================
+   Header Section
+   ================*/
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo {
+    margin: 3rem 0;
+}
+
+.hero-image-mobile {
+    order: -1;
+    margin-bottom: 3rem;
+}
+
+.hero-image-left,
+.hero-image-right {
+    display: none;
+}
+
+.hero-title {
+    width: 80%;
+    line-height: 1;
+    margin: 0 auto 1.5rem;
+}
+
+.hero-subtitle {
+    margin-bottom: 2.125rem;
+}
+
+
+/* buttons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 500px;
+    margin: 0 1rem .875rem 0;
+    padding: 1em 2.5em;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.btn-download {
+    background: #4D96A9;
+}
+
+.btn-what {
+    padding: 1em 1.813em;
+}
+
+.btn-what,
+.btn-footer {
+    background: #855FB1;
+}
+
+.btn-download-accent {
+    color: #8FE3F9;
+}
+
+.btn-download:hover,
+.btn-download:focus {
+    background: #71C0D4;
+}
+
+.btn-what:hover,
+.btn-what:focus,
+.btn-footer:hover,
+.btn-footer:focus {
+    background: #B18BDD;
+}
+
+.btn-footer-accent {
+    color: #D9B8FF;
+}
+
+/* ================
+   Main-Content Section
+   ================*/
+
+.gallery-image {
+    border-radius: 8px;
+}
+
+.accent-1 {
+    margin: 4rem 0;
+}
+
+.accent-text {
+    color: #87879D;
+    border: 1px solid rgb(135, 135, 157, .25);
+    border-radius: 100%;
+    padding: .938rem 1.188rem;
+    display: inline-block;
+    margin-top: 0;
+}
+
+.accent-line {
+    border-left: 1px solid rgb(135, 135, 157, .25);
+    content: " ";
+    height: 84px;
+    width: 0;
+    margin: 0 auto;
+}
+
+.main-title {
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.main-content-info {
+    margin: 4rem 0;
+}
+
+/* ================
+   Footer Section
+   ================*/
+
+.accent-2 {
+    margin: 5rem 0 -1.9rem;
+}
+
+.accent-2-background {
+    background: #fff;
+}
+
+footer {
+    background-image: url(../assets/tablet/image-footer.jpg);
+    background-color: #4A96AB;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    color: #fff;
+    object-fit: cover;
+    padding: 5.75em 0 0;
+    min-height: 428px;
+}
+
+
+
+
+/* ================
+   Media Queries
+   ================*/
+
+@media screen and (min-width: 600px) {
+
+    /* ================
+       Typography
+       ================*/
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .footer-title {
+        font-size: 2.5rem;
+        width: 60%;
+        margin: 0 auto 2rem;
+        line-height: 1.1;
+    }
+
+    /* ================
+       Layout
+       ================*/
+    .main-image-gallery {
+        grid-template-columns: repeat(4, minmax(0, 255px));
+        column-gap: 1.563rem;
+        row-gap: 1.563rem;
+    }
+
+    .img-1 {
+        grid-column: 1 / span 1;
+    }
+
+    .img-2 {
+        grid-column: 2 / span 1;
+    }
+
+    .img-3 {
+        grid-column: 3 / span 1;
+    }
+
+    .img-4 {
+        grid-column: 4 / span 1;
+    }
+
+    /* ================
+       Header Section
+       ================*/
+
+    .hero-title {
+        width: 45%;
+        margin: 0 auto 1.5rem;
+    }
+
+    .hero-subtitle {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ================
+       Main-Content Section
+       ================*/
+    .main-title {
+        font-size: 2.5rem;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-pretitle {
+        margin-bottom: 1rem;
+    }
+
+    .main-content-text {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .accent-1 {
+        margin: 5rem 0 4rem;
+    }
+
+    /* ================
+       Footer Section
+       ================*/
+    .footer-text {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    /* ================
+       Typography
+       ================*/
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .hero-subititle,
+    .main-content-text,
+    .footer-text {
+        font-size: 1.125rem;
+    }
+
+    /* ================
+       Header Section
+       ================*/
+
+    .hero {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .hero-title {
+        width: 90%;
+    }
+
+    .hero-subtitle {
+        width: 100%;
+    }
+
+    .hero-image-mobile {
+        display: none;
+    }
+
+    .hero-image-left,
+    .hero-image-right {
+        object-fit: contain;
+        display: initial;
+    }
+
+    .image-container-left {
+        order: -1;
+        justify-self: start;
+    }
+
+    .image-container-right {
+        justify-self: end;
+        align-self: flex-end;
+    }
+
+    /* ================
+       Main-Content Section
+       ================*/
+
+    .main-title {
+        width: 25%;
+    }
+
+    .main-content-text {
+        width: 29%;
+    }
+
+    /* ================
+       Footer Section
+       ================*/
+
+    footer {
+        background-image: url(../assets/desktop/image-footer.jpg);
+        background-size: cover;
+        padding: 7.25em 0 6.5rem;
+        min-height: 308px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: initial;
+    }
+
+    .footer-flex {
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-title,
+    .footer-text,
+    container a {
+        width: 25%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-title {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+        line-height: 1.1;
+    }
+}
